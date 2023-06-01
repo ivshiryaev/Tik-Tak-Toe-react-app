@@ -1,0 +1,161 @@
+*{
+  margin: 0px;
+  padding: 0px;
+
+  box-sizing: border-box;
+
+  font-family: Sequel100Black-75;
+}
+
+@font-face{
+  font-family: Sequel100Black-75;
+  src: url('./sequel-100-black-75.ttf') format('truetype');
+}
+
+body{
+  margin: 0px;
+  padding: 16px;
+
+  background-color: #3BDCFF;
+}
+
+.myDiv{
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 1rem 0px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 32px;
+  gap: 32px;
+
+  /*min-width: 396px;*/
+  min-height: 980px;
+
+  background: #FFF27D;
+  border: 4px solid #000000;
+  box-shadow: 5px 6px 8px rgba(0, 0, 0, 0.49);
+  border-radius: 15px;
+}
+.status{
+  font-size: 1.4rem;
+}
+.game-board{
+  overflow: hidden;
+
+  width: 300px;
+  height: 300px;
+
+  outline: 4px solid #000000;
+  border-radius: 5px;
+}
+.board-row{
+  margin: 0px;
+  padding: 0px;
+}
+
+.square{
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+
+  background-color: transparent;
+
+  outline: 2px solid #000000;
+}
+.square button{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: transparent;
+  font-size: 50px;
+  color: black;
+
+  border: none;
+
+  width: 100%;
+  height: 100%;
+}
+.square button:hover{
+  cursor: pointer;
+}
+
+.game-info ul :first-child button{
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.game-info ul{
+  list-style-type: none;
+}
+.game-info ul li{
+  margin-bottom: 4px;
+}
+.game-info ul li button{
+  width: 250px;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 5px;
+
+  padding: 8px 36px;
+}
+.game-info ul li button:hover{
+  cursor: pointer;
+  background-color: white;
+}
+
+
+
+.square::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.leftSide{
+  text-align: center;
+}
+.status{
+  margin-bottom: 16px;
+}
+
+@media only screen and (min-width: 760px){
+  .game-wrapper{
+    flex-direction: row;
+    min-height: 582px;
+    padding: 48px;
+  }
+  .board-row{
+  }
+}
+
+.info{
+  display: block;
+
+  border: 4px solid black;
+  border-radius: 15px;
+  padding: 16px;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.info p{
+  margin-bottom: 16px;
+}
+
+@media only screen and (min-width: 392px){
+  .info{
+    display: none;
+  }
+}
